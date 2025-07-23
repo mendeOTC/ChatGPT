@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="redirectForm" onsubmit="redirectToJotform(); return false;">
+      <input type="text" id="firstName" placeholder="First Name" required><br><br>
+      <input type="email" id="email" placeholder="Email" required><br><br>
+      <button type="submit">Continue</button>
+    </form>
+
+    <script>
+      function redirectToJotform() {
+        const name = encodeURIComponent(document.getElementById('firstName').value);
+        const email = encodeURIComponent(document.getElementById('email').value);
+
+        const jotformURL = `https://form.jotform.com/242594227065156?firstName=${name}&email=${email}`;
+
+        window.location.href = jotformURL;
+      }
+    </script>
+  </body>
+</html>
