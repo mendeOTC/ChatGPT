@@ -12,6 +12,7 @@
         const name = encodeURIComponent(document.getElementById('firstName').value);
         const email = encodeURIComponent(document.getElementById('email').value);
 
+        // Replace with your actual Jotform field parameter names if needed
         const jotformURL = `https://form.jotform.com/252034187453051?firstName=${name}&email=${email}`;
 
         window.location.href = jotformURL;
